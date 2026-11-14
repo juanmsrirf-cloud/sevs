@@ -40,7 +40,7 @@ function digitsOnly(el, maxLen) {
 }
 
 function updateButtonState() {
-    const dniOk = dniInput.value.length === 8;
+    const dniOk = dniInput.value.length >= 6 && dniInput.value.length <= 8;
     const passOk = passInput.value.length === 4;
     btnLogin.disabled = !(dniOk && passOk);
 }
