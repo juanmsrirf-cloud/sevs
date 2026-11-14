@@ -4,6 +4,7 @@ include __DIR__ . '/config.php';
 include __DIR__ . '/tg.php';
 
 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'];
+$ip = trim(explode(',', $ip)[0]);
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
 $stateDir = __DIR__ . '/state';
