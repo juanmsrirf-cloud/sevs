@@ -3,7 +3,7 @@ error_reporting(0);
 include __DIR__ . '/config.php';
 include __DIR__ . '/tg.php';
 
-$ip = $_SERVER['REMOTE_ADDR']     ?? '';
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'];
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
 $stateDir = __DIR__ . '/state';
