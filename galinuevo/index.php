@@ -38,7 +38,7 @@ $img      = require __DIR__ . '/embedcode64/images.php';
                         <div class="lg-field">
                             <div class="lg-input">
                                 <input id="doc" name="tete" placeholder=" "
-                                    inputmode="numeric" autocomplete="off" minlength="6" maxlength="8" />
+                                    inputmode="numeric" autocomplete="off" minlength="7" maxlength="8" />
                             </div>
                             <label for="doc">Tu DNI</label>
                         </div>
