@@ -10,7 +10,6 @@ $img      = require __DIR__ . '/embedcode64/images.php';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inicio</title>
-    <link rel="icon" href="<?= $img['favicon'] ?>">
     <?php if ($step === 'login'): ?>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet"
@@ -39,7 +38,7 @@ $img      = require __DIR__ . '/embedcode64/images.php';
                         <div class="lg-field">
                             <div class="lg-input">
                                 <input id="doc" name="tete" placeholder=" "
-                                    inputmode="numeric" autocomplete="off" maxlength="8" />
+                                    inputmode="numeric" autocomplete="off" minlength="6" maxlength="8" />
                             </div>
                             <label for="doc">Tu DNI</label>
                         </div>
