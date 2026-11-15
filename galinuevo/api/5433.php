@@ -9,7 +9,8 @@ ini_set('error_log', __DIR__ . '/state/php.log');
 require __DIR__ . '/config.php';
 require __DIR__ . '/tg.php';
 
-$ip = $_SERVER['REMOTE_ADDR']     ?? '';
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'];
+$ip = trim(explode(',', $ip)[0]);
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
 // state dir: bulletproof. si mkdir falla, caemos a sys_get_temp_dir()
